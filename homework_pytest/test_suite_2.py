@@ -32,4 +32,4 @@ class TestSuite:
     def test_third(self, request):
         response = requests.get(f"{url}/test/")
         code = response.status_code
-        assert code != 404, save_data(f"test_suite_2:{request.node.name} - {code}")
+        assert code == 404
